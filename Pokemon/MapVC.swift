@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapVC: UIViewController, CLLocationManagerDelegate {
+class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -22,18 +22,22 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         pokemons = getAllPokemon()
+        
         
         manager.delegate = self
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            print("Redy to go!")
+            
+            mapView.delegate = self
+            
             mapView.showsUserLocation = true
             
             manager.startUpdatingLocation()
             
             Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
-               
+                
                 if let coord = self.manager.location?.coordinate {
                     let anno = MKPointAnnotation()
                     anno.coordinate = coord
@@ -51,6 +55,35 @@ class MapVC: UIViewController, CLLocationManagerDelegate {
         
         
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            let annoView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            annoView.image = UIImage(named: "player")
+            var frame = annoView.frame
+            frame.size.height = 50
+            frame.size.width = 50
+            annoView.frame = frame
+            return annoView
+        }
+        
+        let annoView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        
+        annoView.image = UIImage(named: "mew")
+        
+        var frame = annoView.frame
+        
+        frame.size.height = 50
+        frame.size.width = 50
+        annoView.frame = frame
+        
+        
+        
+        return annoView
+        
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateCount < 3 {
             let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 200, 200)
