@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93A93F861DD14D3D002D5D4A /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A93F851DD14D3D002D5D4A /* PokeAnnotation.swift */; };
 		93B000A91DD0E5930060A2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B000A81DD0E5930060A2A6 /* AppDelegate.swift */; };
 		93B000AB1DD0E5930060A2A6 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B000AA1DD0E5930060A2A6 /* MapVC.swift */; };
 		93B000AE1DD0E5930060A2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B000AC1DD0E5930060A2A6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93A93F851DD14D3D002D5D4A /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		93B000A51DD0E5920060A2A6 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B000A81DD0E5930060A2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93B000AA1DD0E5930060A2A6 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				93B000C31DD124D70060A2A6 /* CoreDataHelp.swift */,
+				93A93F851DD14D3D002D5D4A /* PokeAnnotation.swift */,
 			);
 			name = Modulos;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B000AB1DD0E5930060A2A6 /* MapVC.swift in Sources */,
+				93A93F861DD14D3D002D5D4A /* PokeAnnotation.swift in Sources */,
 				93B000A91DD0E5930060A2A6 /* AppDelegate.swift in Sources */,
 				93B000B11DD0E5930060A2A6 /* Pokemon.xcdatamodeld in Sources */,
 				93B000C41DD124D70060A2A6 /* CoreDataHelp.swift in Sources */,
@@ -342,6 +346,7 @@
 				93B000BC1DD0E5930060A2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
