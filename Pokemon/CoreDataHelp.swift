@@ -22,6 +22,17 @@ func addAllPokemon() {
     createPokemon(name: "Pidgey", imageName: "pidgey")
     createPokemon(name: "Pikachu", imageName: "pikachu-2")
     
+    //set new pack
+    createPokemon(name: "Abra", imageName: "abra")
+    createPokemon(name: "Bellsprout", imageName: "bellsprout")
+    createPokemon(name: "Dratini", imageName: "dratini")
+    createPokemon(name: "Psyduck", imageName: "psyduck")
+    createPokemon(name: "Rattata", imageName: "rattata")
+    createPokemon(name: "Snorlax", imageName: "snorlax")
+    createPokemon(name: "Squirtle", imageName: "squirtle")
+    createPokemon(name: "Venonat", imageName: "venonat")
+    createPokemon(name: "Weedle", imageName: "weedle")
+    createPokemon(name: "Zubat", imageName: "zubat")
     
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
 }
